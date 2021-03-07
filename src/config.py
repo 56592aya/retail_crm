@@ -4,7 +4,7 @@ import os
 
 INPUT_DIR = '../input'
 
-INPUT_FILE = '../input/_data_empty_csv.csv'
+RETAIL_FILE = '../input/OnlineRetail.csv'
 
 MODEL_DIR = '../models'
 
