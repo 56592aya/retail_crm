@@ -21,7 +21,7 @@ def preprocess_retail_df(country, out):
         pass;
     else:
         df = df.loc[df['Country'] == country]   
-    df.loc[:,'customer_id'] = df['CustomerID'].apply(lambda x: str(np.int(x)) if pd.notna(x) else np.nan)
+    df.loc[:,'customer_id'] = df['CustomerID'].apply(lambda x: str(int(x)) if pd.notna(x) else np.nan)
     df = df.dropna(subset = ['customer_id'])
     df.loc[:,'date'] = df['InvoiceDate'].apply(lambda x: datetime.datetime.strptime(x, '%m/%d/%Y %H:%M'))
     df = df.sort_values(by='date')
@@ -29,7 +29,7 @@ def preprocess_retail_df(country, out):
     df.loc[:,'order_month'] = df['date'].dt.to_period('M')
     # first purchase month as determinant of the cohort, note the transform in groupby 
     df['cohort'] = df.groupby('customer_id')['date'].transform('min').dt.to_period('M')
-    df.to_csv(os.path.join(config.INPUT_DIR, f"{out}.csv"))
+    df.to_csv(os.path.join(config.INPUT_DIR, f"{out}.csv"), index=False)
 
 
 if __name__ == "__main__":
