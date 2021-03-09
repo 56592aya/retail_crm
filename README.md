@@ -1,6 +1,6 @@
-# Project Title
+# Retail and CRM
 
-[Projct Description goes here]
+This is an applied data analysis for common retail and customer centric problems. 
 
 ## How to get started
 
@@ -32,7 +32,7 @@ $ pip install -r requirements.txt
 
 [Any specific changes to the project goes here]
 
-```console
+<!-- ```console
 .
 ├── app
 │   ├── app.py
@@ -43,7 +43,7 @@ $ pip install -r requirements.txt
 │       ├── layout.html
 │       └── result.html
 ├── input
-│   └── _data_empty_csv.csv
+│   └── retail.csv
 ├── models
 │   └── model_dump_defult.bin
 ├── notebooks
@@ -61,15 +61,15 @@ $ pip install -r requirements.txt
 
 `./app/`
 
-- contains the information about deploying the proj as app
+- contains the information about deploying the proj as app -->
 
 `./input/`
 
 - contains the input files (raw and/or modified) used in the project
 
-`./models/`
+<!-- `./models/`
 
-- contains the saved models
+- contains the saved models -->
 
 `./notebooks/`
 
@@ -82,22 +82,22 @@ $ pip install -r requirements.txt
 - `config.py`
 
   - consists of the environemtnal variables or global parameters used
-
+<!-- 
 - `create_folds.py`
 
-  - creates the folds according to the data distribution for evaluation
-
+  - creates the folds according to the data distribution for evaluation -->
+<!-- 
 - `preprocessing.py`
 
   - entails most of the preprocessing that goes into the raw data
 
 - `train.py`
 
-  - contains the tools to train the model
-
+  - contains the tools to train the model -->
+<!-- 
 - `utils.py`
 
-  - These are utility functions needed
+  - These are utility functions needed -->
 
 `./requirements.txt`
 
@@ -105,9 +105,9 @@ $ pip install -r requirements.txt
 
 `./README.md`
 
-- contains the instructions for running the programs smoothly
+- contains the instructions for running the programs smoothly and descriptions on the content of the project
 
-### app
+<!-- ### app
 To run the Flask app in the local browser, go to the app folder.
 
 ```shell
@@ -115,7 +115,11 @@ $ export FLASK_APP=app.y
 $ python app.y
 ```
 
-Then open your browser at `localhost/5000`
+Then open your browser at `localhost/5000` -->
 
 
 ### References:
+
+The retail data is a common kaggle dataset that you can find [here](https://www.kaggle.com/vijayuv/onlineretail) 
+
+The notebooks are an amalgam of blog reads from medium heavily based on the work of [Barış Karaman](https://medium.com/@karamanbk)
